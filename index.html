@@ -60,7 +60,7 @@
   
 							<p>Python, SQL, Regex, Scala, Markdown. Pandas, NumPy, Matplotlib, Seaborn, BeautifulSoup,
 								NLTK, Scikit-Learn, TensorFlow, Keras, Jupyter, Google Colab, and DataBricks. </p>
-							<p>(Photo by <a href="https://unsplash.com/@usgs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">USGS</a> on <a href="https://unsplash.com/photos/white-and-black-abstract-painting-PuLsDCBbyBM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>)</p>
+							<p>(Photo by <a href="https://unsplash.com/@usgs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">USGS</a>)</p>
 
 						</article>							
 
@@ -69,9 +69,9 @@
 							<p>Below are a few projects that showcase some of my skills in Data Science and GIS</p>
 							<h2 class="major">Reddit vs OPENAI</h2>
 							<p>
-								For this project I attempted to simulate a task that might be
+								<!-- For this project I attempted to simulate a task that might be
 								asked of a data scientist to determine what proportion of users 
-								on a website are actual human users and how many are bots.
+								on a website are actual human users and how many are bots.<br>
 								Using the Python Reddit API Wrapper - a.k.a. PRAW - I collected 5250
 								question and answer pairs from various subreddits. The subreddits I
 								collected QA pairs from were: AskReddit, AskScience, AskHistorians,
@@ -91,52 +91,41 @@
 								After collecting all the pertinent data I carried out data cleaning,
 								 which included removing reddit posts and responses that had been [deleted]
 								  or [removed]. And removed '\n' and '\_' from all the posts. I then labeled 
-								  answers as either AI generated (1) or not (0).
+								  answers as either AI generated (1) or not (0). -->
+
+								For this project I attempted to simulate a task that might be asked
+								of a data scientist to determine what proportion of users on a
+								website are actual human users and how many are bots. <br>-<br>To do this,
+								first I collected approximately 5000 question-answer pairs from Reddit
+								using the Python Reddit API Wrapper. Then I fed the questions collected 
+								from Reddit to ChatGPT using the OpenAI API and collected the responses. 
+								Using the responses from Reddit and ChatGPT I trained multiple Natural Language
+								Processing machine learning classifier models capable of predicting whether
+								a response came from a human or AI. <br>-<br>
 
 								I used pipelines and gridsearches to find optimal hyperparameter values 
 								for the various models I generated. Overall I fit 10 classification models: 
 								Multinomial Naive Bayes, Logistic Regression, Bernoulli Naive Bayes, and Linear 
 								Support Vector Classification with Countvectorizer preprocessing and Multinomial 
 								Naive Bayes, Logistic Regression, Gaussian Naive Bayes, K-nearest neighbors, and
-								 Random Forest with TFID Vectorizer.
+								Random Forest with TFID Vectorizer.
 							</p>
 
+							<p>(More information on the <a href="https://github.com/AlanAndrews/reddit_v_openai">project repo</a>)</p>
+
+
 							<p></p>
-							
+							<span class="image main"><img src="images/RedvOpTrainPerfComp.jpg" alt="" /></span>
+							<span class="image main"><img src="images/RedvOpTestPerfComp.jpg" alt="" /></span>
 							<span class="image main"><img src="images/RedvOpLogrConfMat.jpg" alt="" /></span>
 							<span class="image main"><img src="images/RedvOpLsvcConfMat.jpg" alt="" /></span>
 							<!-- <span class="image main"><img src="images/pic02.jpg" alt="" /></span>
 							<span class="image main"><img src="images/pic02.jpg" alt="" /></span> -->
-							<p>In this project ....</p>
+						
 							<p></p>
 						</article>
 
 						<!-- Project 2 -->
-						<article id="portfolio">
-							<h2 class="major">Effect of SAT and ACT <br> on college admissions 
-								</h2>
-							<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
-
-							<span class="image main"><img src="images/SATvACT.jpg" alt="" /></span>
-							<p>Many colleges require applicants to submit ACT and SAT scores as criteria for admission. 
-								States have different participation rates in each of the exams, i.e. most states have a majority of its 11th and 12th graders to take one or the other exam. Most states tend to favor one exam over the other. 
-								A minority of states either use both tests approximately equally or have only a small number of its 11th and 12th grades students take one of the exams.
-								The Department of Education has hired me as a consultant to look into whether states that opt for one exam over the other have different rates of college acceptance. 
-								sat_act_by_college.csv
-								Ranges of Accepted ACT & SAT Student Scores by Colleges
-								sat_2019.csv
-								2019 SAT Scores and Participation rate by State
-								act_2019.csv
-								2019 SAT Scores and Participation rate by State
-								us-colleges-and-universities.csv 
-								source: https://public.opendatasoft.com/
-								Data Cleaning
-								EDA
-								SAT participation rate by state has a -0.54 correlation with college acceptance.
-								ACT participation rate by state has a 0.56 correlation with college acceptance. </p>
-						</article>
-
-						<!-- Project 3 -->
 						<article id="portfolio">
 							<h2 class="major">Air Toxicity</h2>
 
@@ -176,6 +165,31 @@
 									Gradient Boosting​
 									Metrics for determining the best model were R squared and Root Mean Squared Error
 									We selected these metrics because R^2 is useful because it states how much of the variation of Y is explained by the models, and RMSE is useful to have a measure in units of Y of how far in average our predictions are from the observed values.</p>
+						</article>
+
+						<!-- Project 3 -->
+						<article id="portfolio">
+							<h2 class="major">Effect of SAT and ACT <br> on college admissions 
+								</h2>
+							<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
+
+							<span class="image main"><img src="images/SATvACT.jpg" alt="" /></span>
+							<p>Many colleges require applicants to submit ACT and SAT scores as criteria for admission. 
+								States have different participation rates in each of the exams, i.e. most states have a majority of its 11th and 12th graders to take one or the other exam. Most states tend to favor one exam over the other. 
+								A minority of states either use both tests approximately equally or have only a small number of its 11th and 12th grades students take one of the exams.
+								The Department of Education has hired me as a consultant to look into whether states that opt for one exam over the other have different rates of college acceptance. 
+								sat_act_by_college.csv
+								Ranges of Accepted ACT & SAT Student Scores by Colleges
+								sat_2019.csv
+								2019 SAT Scores and Participation rate by State
+								act_2019.csv
+								2019 SAT Scores and Participation rate by State
+								us-colleges-and-universities.csv 
+								source: https://public.opendatasoft.com/
+								Data Cleaning
+								EDA
+								SAT participation rate by state has a -0.54 correlation with college acceptance.
+								ACT participation rate by state has a 0.56 correlation with college acceptance. </p>
 						</article>
 
 						<!-- Project 4 -->
