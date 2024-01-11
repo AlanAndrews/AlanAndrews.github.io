@@ -68,31 +68,40 @@
 						<article id="portfolio">
 							<p>Below are a few projects that showcase some of my skills in Data Science and GIS</p>
 							<h2 class="major">Reddit vs OPENAI</h2>
-							<p>Collect question answer pairs from Reddit.
-								Submit questions to OpenAI model. 
-								Build models to predict human-generated text vs AI-generated text.
-								Python Reddit API Wrapper - Praw
-								Subreddits: Ask, AskReddit, AskScience, AskHistorians, Ask_politics, AskCulinary
-								Additional subreddits: AskUK, AskStatistics, AskScitech
-								Created loop to collect attributes from 999 top comments in each subreddit. 
-								Collected 5250 question-answer pairs.
-								OpenAI API
-								Used backoff module to stay within API rate limit.
-								Submitted questions collected from Reddit in batches of 20.
-								Used the OpenAI Davinci Model.
-								$$$$
-								Data Cleaning
-								Count Vectorizer and TFID
-								Multinomial Naive Bayes
-								Logistic Regression
-								Gaussian Naive Bayes
-								K-nearest neighbors
-								Random Forest
-								Linear Support Vector Classification
-								Bernoulli Naive Bayes
-								The best performing models were the pipelines with Logistic Regression and LSVC estimators using TFID vectorizer preprocessing.
-								They performed well and generalized on unseen data.
+							<p>
+								For this project I attempted to simulate a task that might be
+								asked of a data scientist to determine what proportion of users 
+								on a website are actual human users and how many are bots.
+								Using the Python Reddit API Wrapper - a.k.a. PRAW - I collected 5250
+								question and answer pairs from various subreddits. The subreddits I
+								collected QA pairs from were: AskReddit, AskScience, AskHistorians,
+								Ask_politics, and AskCulinary. I also used AskUK, AskStatistics, 
+								AskScitech as subreddits to make test calls to the API. I created
+								a loop to collect attributes from the 999 top comments in each 
+								subreddit. The attributes for each post that I collected were the post
+								 title, main text of the subreddit post, when the post was created 
+								 ('created_utc'), and the top response to the post, as well as how many
+								  upvotes the top response received.
+
+								After collecting the Reddit Q/A pairs I used the OpenAI API to
+								feed te questions to the DAVINCI model. I utilized the python 
+								backoff module and submitted the reddit questions in batches of
+								 20 to stay below the rate limit set by the API.
+
+								After collecting all the pertinent data I carried out data cleaning,
+								 which included removing reddit posts and responses that had been [deleted]
+								  or [removed]. And removed '\n' and '\_' from all the posts. I then labeled 
+								  answers as either AI generated (1) or not (0).
+
+								I used pipelines and gridsearches to find optimal hyperparameter values 
+								for the various models I generated. Overall I fit 10 classification models: 
+								Multinomial Naive Bayes, Logistic Regression, Bernoulli Naive Bayes, and Linear 
+								Support Vector Classification with Countvectorizer preprocessing and Multinomial 
+								Naive Bayes, Logistic Regression, Gaussian Naive Bayes, K-nearest neighbors, and
+								 Random Forest with TFID Vectorizer.
 							</p>
+
+							<p></p>
 							
 							<span class="image main"><img src="images/RedvOpLogrConfMat.jpg" alt="" /></span>
 							<span class="image main"><img src="images/RedvOpLsvcConfMat.jpg" alt="" /></span>
