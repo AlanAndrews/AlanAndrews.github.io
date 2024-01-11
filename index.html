@@ -95,13 +95,13 @@
 
 								For this project I attempted to simulate a task that might be asked
 								of a data scientist to determine what proportion of users on a
-								website are actual human users and how many are bots. <br>-<br>To do this,
+								website are actual human users and how many are bots. <br><br>To do this,
 								first I collected approximately 5000 question-answer pairs from Reddit
 								using the Python Reddit API Wrapper. Then I fed the questions collected 
 								from Reddit to ChatGPT using the OpenAI API and collected the responses. 
 								Using the responses from Reddit and ChatGPT I trained multiple Natural Language
 								Processing machine learning classifier models capable of predicting whether
-								a response came from a human or AI. <br>-<br>
+								a response came from a human or AI. <br><br>
 
 								I used pipelines and gridsearches to find optimal hyperparameter values 
 								for the various models I generated. Overall I fit 10 classification models: 
@@ -109,8 +109,9 @@
 								Support Vector Classification with Countvectorizer preprocessing and Multinomial 
 								Naive Bayes, Logistic Regression, Gaussian Naive Bayes, K-nearest neighbors, and
 								Random Forest with TFID Vectorizer.
-							</p>
 
+								</p>
+							<p>See some of the results below.</p>
 							<p>(More information on the <a href="https://github.com/AlanAndrews/reddit_v_openai">project repo</a>)</p>
 
 
@@ -128,50 +129,28 @@
 						<!-- Project 2 -->
 						<article id="portfolio">
 							<h2 class="major">Air Toxicity</h2>
+						<p>​For this project colleagues and I participated in a Kaggle competition calling for machine learning
+							models that could accurately predict the incidence of respiratory illnesses based on the concentration 
+							of numerous air quality parameters.
+							<p>After cleaning the data and using various mehtods to impute missing values, we explored, tuned, and assesed the performance of numerous 
+								machine learning methods. 
+								<br><br>
+								The best performing model in this case was RandomForestRegressor with mean imputed values in the training dataset.
+								 See below:
+							</p>
+​​						  <p>(More information on the <a href="https://github.com/AlanAndrews/Air_toxicity">project repo</a>)</p>
 
-						<p>​The data consists of several files, listed below:
-								
-							train.csv - consisting of incidence rates of respiratory disease in each state, by year, by age bracket.
-							test.csv - same as train without the incidence rates.
-							4 supplemental parquet files containing 167 parameters pertaining to the following air pollutants:
-							Lead (Pb)
-							Hazardous Air Pollutants (HAPs)
-							Various Nitrogen Oxide compounds (NOs)
-							Volatile organic compounds (VOCs)​​</p>
+
 							<span class="image main"><img src="images/air_tox_res_table.png" alt="" /></span>
 							<span class="image main"><img src="images/AirToxRF.png" alt="" /></span>
-							<p>Data analyzed
+							
 
-
-								<p>Data preprocessing
-									Columns with more than 20% missing data were eliminated from the parquet files
-									The data was aggregated by year and state.
-									Lag columns were created for 2, 5, and 8 years before the date in each row to take into consideration latent effects of pollutants on respiratory disease incidence rates.
-									Data from the parquet files was combined with the training and testing datasets by state/year.​
-									Exploration of different imputation methods for the missing values
-									Mean
-									Zero
-									Iterative imputation with Linear Regression
-									Iterative imputation with BayesianRidge
-									Knn imputer​
-									Exploration of different models to find the best model for the prediction
-									Linear Regression
-									Linear Regression with Lasso regularization
-									Random Forest Regressor
-									ExtraTrees Regressor
-									AdaBoost Regressor
-									Bagging Regressor
-									Neural Networks
-									Gradient Boosting​
-									Metrics for determining the best model were R squared and Root Mean Squared Error
-									We selected these metrics because R^2 is useful because it states how much of the variation of Y is explained by the models, and RMSE is useful to have a measure in units of Y of how far in average our predictions are from the observed values.</p>
 						</article>
 
 						<!-- Project 3 -->
 						<article id="portfolio">
 							<h2 class="major">Effect of SAT and ACT <br> on college admissions 
 								</h2>
-							<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
 
 							<span class="image main"><img src="images/SATvACT.jpg" alt="" /></span>
 							<p>Many colleges require applicants to submit ACT and SAT scores as criteria for admission. 
